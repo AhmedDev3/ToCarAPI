@@ -42,7 +42,7 @@ namespace ToCarAPI.Controllers
 
         // GET: api/Item/search?term=keyword
         [HttpGet("search")]
-        public async Task<ActionResult<IEnumerable<Item>>> SearchItems(string term)
+        public async Task<ActionResult<IEnumerable<Item>>> SearchItems(string term , int? categoryId)
         {
             if (string.IsNullOrWhiteSpace(term))
             {
@@ -50,11 +50,16 @@ namespace ToCarAPI.Controllers
             }
 
             term = term.ToLower();
-            return await _context.Items
+            var query = _context.Items
                 .Where(i => i.Title.ToLower().Contains(term) || 
-                       i.PartCode.ToLower().Contains(term))
-                .Include(i => i.Category)
-                .ToListAsync();
+                       i.PartCode.ToLower().Contains(term)
+                       )
+                .Include(i => i.Category);
+                if(categoryId != null)
+                {
+                    query.Where(x=>x.CategoryId == categoryId);
+                }
+            return await query.ToListAsync();
         }
 
         // GET: api/Item/category/5
