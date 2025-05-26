@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace ToCarAPI.Models
 {
     public class Category
@@ -6,6 +8,7 @@ namespace ToCarAPI.Models
         public string Name { get; set; } = string.Empty;
         public string ImageUrl { get; set; } = string.Empty;
         public string Title { get; set; } = string.Empty;
+        [JsonIgnore]
         public List<Item> Items { get; set; } = new List<Item>();
     }
 }

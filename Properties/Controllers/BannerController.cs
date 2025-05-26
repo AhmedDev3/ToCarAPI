@@ -39,16 +39,38 @@ namespace ToCarAPI.Controllers
         }
 
         // POST: api/Banner
-        [HttpPost]
+        [HttpPost("upload")]
         [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<Banner>> PostBanner(Banner banner)
+        public async Task<IActionResult> UploadBanner([FromForm] string title, [FromForm] IFormFile image)
         {
-            banner.CreatedAt = DateTime.UtcNow;
-            _context.Banners.Add(banner);
-            await _context.SaveChangesAsync();
+            if (image == null || image.Length == 0)
+            return BadRequest("No image uploaded.");
 
-            return CreatedAtAction(nameof(GetBanner), new { id = banner.Id }, banner);
-        }
+            var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+            if (!Directory.Exists(uploadsFolder))
+            Directory.CreateDirectory(uploadsFolder);
+
+            var uniqueFileName = $"{Guid.NewGuid()}{Path.GetExtension(image.FileName)}";
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+            await image.CopyToAsync(stream);
+            }
+
+            var banner = new Banner
+            {
+            Title = title,
+            ImageUrl = $"/uploads/{uniqueFileName}",
+            IsActive = true,
+            CreatedAt = DateTime.UtcNow
+        };
+
+    _context.Banners.Add(banner);
+    await _context.SaveChangesAsync();
+
+    return Ok(banner);
+}
 
         // PUT: api/Banner/5
         [HttpPut("{id}")]

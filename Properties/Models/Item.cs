@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace ToCarAPI.Models
 {
     public class Item
@@ -10,6 +12,7 @@ namespace ToCarAPI.Models
         public string PartCode { get; set; } = string.Empty;
         public string DistributingCompany { get; set; } = string.Empty;
         public int CategoryId { get; set; }
+        [JsonIgnore] // <-- Prevents serialization loop
         public Category? Category { get; set; }
     }
 }

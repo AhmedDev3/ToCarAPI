@@ -72,6 +72,7 @@ namespace ToCarAPI.Controllers
             // Create order
             var order = new Order
             {
+                UserId = request.UserId,
                 CustomerName = request.CustomerName,
                 PhoneNumber = request.PhoneNumber,
                 Location1 = request.Location1,
@@ -96,13 +97,31 @@ namespace ToCarAPI.Controllers
 
             // Save order
             _context.Orders.Add(order);
-            
+
             // Clear cart
             _context.CartItems.RemoveRange(cartItems);
-            
+
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetOrder), new { id = order.Id }, order);
         }
+        // GET: api/Order/user/{userId}
+        [HttpGet("user/{userId}")]
+        public async Task<ActionResult<IEnumerable<Order>>> GetOrdersByUserId(string userId)
+        {
+         var orders = await _context.Orders
+         .Where(o => o.UserId == userId)
+         .Include(o => o.OrderItems)
+         .ThenInclude(oi => oi.Item)
+         .ToListAsync();
+
+         if (orders == null || !orders.Any())
+         {
+           return NotFound();
+         }
+
+         return Ok(orders);
+        }
+
     }
 }

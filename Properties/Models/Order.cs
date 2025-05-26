@@ -8,6 +8,7 @@ namespace ToCarAPI.Models
         public string Location1 { get; set; } = string.Empty;
         public string Location2 { get; set; } = string.Empty;
         public DateTime OrderDate { get; set; }
+        public required string UserId { get; set; }
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
         public decimal TotalAmount { get; set; }
     }
