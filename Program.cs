@@ -49,11 +49,21 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// تأكد من وجود الـ database
+var dbPath = "/app/data";
+if (!Directory.Exists(dbPath))
+    Directory.CreateDirectory(dbPath);
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.EnsureCreated();
+}
+
 // Swagger دايماً شغال
 app.UseSwagger();
 app.UseSwaggerUI();
 
-// بدون HttpsRedirection
 app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
