@@ -1,14 +1,6 @@
 {
   "build": {
-    "buildCommand": "dotnet publish ToCarAPI.csproj -c Release -o out"
-  },
-  "deploy": {
-    "startCommand": "dotnet out/ToCarAPI.dll"
-  },
-  "nixpacks": {
-    "aptPkgs": [],
-    "variables": {
-      "NIXPACKS_DOTNET_VERSION": "8"
-    }
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile"
   }
 }
