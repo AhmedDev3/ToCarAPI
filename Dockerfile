@@ -12,4 +12,5 @@ RUN dotnet publish "./ToCarAPI.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
+COPY ["ToCarApi.db", "/app/data/ToCarApi.db"]
 ENTRYPOINT ["dotnet", "ToCarAPI.dll"]
