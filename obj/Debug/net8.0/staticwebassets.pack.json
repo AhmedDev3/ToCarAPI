@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\LOQ\\ToCarAPI\\wwwroot\\uploads\\16e8bff5-6c28-402f-8b02-b1de1003ac30.jpg",
+      "PackagePath": "staticwebassets\\uploads\\16e8bff5-6c28-402f-8b02-b1de1003ac30.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LOQ\\ToCarAPI\\wwwroot\\uploads\\e6ebbf0f-4761-4093-b423-fc054aee10d7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e6ebbf0f-4761-4093-b423-fc054aee10d7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LOQ\\ToCarAPI\\wwwroot\\uploads\\ffe17135-4315-497c-9ee6-cddb36ffe45c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ffe17135-4315-497c-9ee6-cddb36ffe45c.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ToCarAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ToCarAPI.props",
+      "PackagePath": "build\\ToCarAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ToCarAPI.props",
+      "PackagePath": "buildMultiTargeting\\ToCarAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ToCarAPI.props",
+      "PackagePath": "buildTransitive\\ToCarAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

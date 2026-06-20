@@ -1,11 +1,77 @@
 {
   "Version": 1,
-  "Hash": "/XzfbXC0oKL8ocAOE6mhJny/cWbh/dpoJvCMCYflBfo=",
+  "Hash": "Y+THKythbygqaJcVq+8SBGdGrsYFoiSmBP0g8QQ5jpM=",
   "Source": "ToCarAPI",
   "BasePath": "_content/ToCarAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ToCarAPI\\wwwroot",
+      "Source": "ToCarAPI",
+      "ContentRoot": "C:\\Users\\LOQ\\ToCarAPI\\wwwroot\\",
+      "BasePath": "_content/ToCarAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\LOQ\\ToCarAPI\\wwwroot\\uploads\\16e8bff5-6c28-402f-8b02-b1de1003ac30.jpg",
+      "SourceId": "ToCarAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LOQ\\ToCarAPI\\wwwroot\\",
+      "BasePath": "_content/ToCarAPI",
+      "RelativePath": "uploads/16e8bff5-6c28-402f-8b02-b1de1003ac30.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\16e8bff5-6c28-402f-8b02-b1de1003ac30.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\LOQ\\ToCarAPI\\wwwroot\\uploads\\e6ebbf0f-4761-4093-b423-fc054aee10d7.jpg",
+      "SourceId": "ToCarAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LOQ\\ToCarAPI\\wwwroot\\",
+      "BasePath": "_content/ToCarAPI",
+      "RelativePath": "uploads/e6ebbf0f-4761-4093-b423-fc054aee10d7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\e6ebbf0f-4761-4093-b423-fc054aee10d7.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\LOQ\\ToCarAPI\\wwwroot\\uploads\\ffe17135-4315-497c-9ee6-cddb36ffe45c.jpg",
+      "SourceId": "ToCarAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LOQ\\ToCarAPI\\wwwroot\\",
+      "BasePath": "_content/ToCarAPI",
+      "RelativePath": "uploads/ffe17135-4315-497c-9ee6-cddb36ffe45c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ffe17135-4315-497c-9ee6-cddb36ffe45c.jpg"
+    }
+  ]
 }

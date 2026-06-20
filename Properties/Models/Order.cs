@@ -11,5 +11,7 @@ namespace ToCarAPI.Models
         public required string UserId { get; set; }
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
         public decimal TotalAmount { get; set; }
+        
+    
     }
 }
