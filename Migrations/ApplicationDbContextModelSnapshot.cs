@@ -15,7 +15,7 @@ namespace ToCarAPI.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.4");
+            modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
 
             modelBuilder.Entity("ToCarAPI.Models.Banner", b =>
                 {
@@ -40,6 +40,24 @@ namespace ToCarAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Banners");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ImageUrl = "https://via.placeholder.com/800x200",
+                            IsActive = false,
+                            Title = "عروض الصيف"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ImageUrl = "https://via.placeholder.com/800x200",
+                            IsActive = false,
+                            Title = "تخفيضات قطع الغيار"
+                        });
                 });
 
             modelBuilder.Entity("ToCarAPI.Models.CartItem", b =>
@@ -86,6 +104,29 @@ namespace ToCarAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ImageUrl = "https://via.placeholder.com/150",
+                            Name = "تشكيلة السيارات",
+                            Title = ""
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ImageUrl = "https://via.placeholder.com/150",
+                            Name = "قطع الغيار",
+                            Title = ""
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ImageUrl = "https://via.placeholder.com/150",
+                            Name = "الإكسسوارات",
+                            Title = ""
+                        });
                 });
 
             modelBuilder.Entity("ToCarAPI.Models.Item", b =>
@@ -125,6 +166,63 @@ namespace ToCarAPI.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Items");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryId = 1,
+                            Description = "سيارة مريحة واقتصادية",
+                            DistributingCompany = "",
+                            ImageUrl = "https://via.placeholder.com/150",
+                            PartCode = "",
+                            Price = 25000m,
+                            Title = "تويوتا كامري"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 1,
+                            Description = "سيارة اقتصادية وموثوقة",
+                            DistributingCompany = "",
+                            ImageUrl = "https://via.placeholder.com/150",
+                            PartCode = "",
+                            Price = 20000m,
+                            Title = "هوندا سيفيك"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 2,
+                            Description = "فلتر زيت عالي الجودة",
+                            DistributingCompany = "",
+                            ImageUrl = "https://via.placeholder.com/150",
+                            PartCode = "",
+                            Price = 15m,
+                            Title = "فلتر زيت"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryId = 2,
+                            Description = "طفاية هواء أصلية",
+                            DistributingCompany = "",
+                            ImageUrl = "https://via.placeholder.com/150",
+                            PartCode = "",
+                            Price = 50m,
+                            Title = "طفاية هواء"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryId = 3,
+                            Description = "غطاء مقود جلدي فاخر",
+                            DistributingCompany = "",
+                            ImageUrl = "https://via.placeholder.com/150",
+                            PartCode = "",
+                            Price = 30m,
+                            Title = "غطاء مقود"
+                        });
                 });
 
             modelBuilder.Entity("ToCarAPI.Models.Order", b =>
