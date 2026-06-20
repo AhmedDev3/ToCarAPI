@@ -5,5 +5,11 @@
   },
   "deploy": {
     "startCommand": "dotnet out/ToCarAPI.dll"
+  },
+  "nixpacks": {
+    "aptPkgs": [],
+    "variables": {
+      "NIXPACKS_DOTNET_VERSION": "8"
+    }
   }
 }
