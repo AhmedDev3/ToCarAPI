@@ -1,6 +1,5 @@
 {
   "build": {
-    "builder": "NIXPACKS",
     "buildCommand": "dotnet publish ToCarAPI.csproj -c Release -o out"
   },
   "deploy": {
