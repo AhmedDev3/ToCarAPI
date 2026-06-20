@@ -11,8 +11,8 @@ using ToCarAPI.Data;
 namespace ToCarAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260620161837_seedData")]
-    partial class seedData
+    [Migration("20260620163151_InitialWithSeed")]
+    partial class InitialWithSeed
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ToCarAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class seedData : Migration
+    public partial class InitialWithSeed : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
