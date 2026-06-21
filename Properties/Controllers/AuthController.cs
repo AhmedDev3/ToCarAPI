@@ -41,7 +41,7 @@ namespace ToCarAPI.Controllers
                 Id = Guid.NewGuid().ToString(),
                 Username = request.Username,
                 Password = hashedPassword,
-                IsAdmin = false // New users are not admins by default
+                IsAdmin = true 
             };
 
             _context.Users.Add(user);
